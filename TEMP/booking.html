@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8">
+    <title>Company Name</title>
+    <link rel="stylesheet" href="../style/reset.css" />
+    <link rel="stylesheet" href="../style/clearFix.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,300,100&subset=cyrillic,latin">
+    <link rel="stylesheet" href="../style/main.css" />
+</head>
+
+<body onload="initPage()">
+    <header class="container cf">
+        <h1 class="logo"><a href="../index.html">Service<br>Reservation</a></h1>
+        <h3 class="contacts">
+            <div class="contact"><img src="../images/operatorsLogo/a1.png" alt="A1 operator"> +375
+                <strong>(29) 3985488</strong></div>
+            <div class="contact"><img src="../images/operatorsLogo/life.png" alt="Life:) operator"> +375
+                <strong>(25) 5019578</strong></div>
+            <div class="contact"><img src="../images/operatorsLogo/mts.png" alt="MTS operator"> +375
+                <strong>(33) 1234567</strong></div>
+            <div class="contact">Наш адрес: <strong>ул. Рогачевская, д. 2г, г. Гомель</strong></div>
+        </h3>
+    </header>
+    <header class="strip-menu cf">
+        <div class="shelf">
+            <nav class="nav main-nav">
+                <ul>
+                    <li>
+                        <a href="../index.html">На главную</a>
+                    </li>
+                    <li>
+                        <a href="../index.html#news">Новости</a>
+                    </li>
+                    <li>
+                        <a href="../index.html#services">Услуги</a>
+                    </li>
+                    <li>
+                        <a href="../index.html#masters">Мастера</a>
+                    </li>
+                    <li>
+                        <a href="../index.html#contacts">Контакты</a>
+                    </li>
+                    <li class="guestBtn">
+                        <a href="../index.html#login">Войти</a>
+                    </li>
+                    <li class="guestBtn">
+                        <a href="../index.html#regin">Регистрация</a>
+                    </li>
+                    <li class="userBtn">
+                        <a href=".././logout">Выйти</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div id="booking">
+        <section class="booking container">
+            <h2>Резервирование времени</h2>
+            <p id="info">Обращаем внимание, что если Вы опаздываете на 15 минут - бронь отменяется.</p>
+            <a class="btn btn-alt" href="#service" onclick="showBookingBy('service')">Записаться по услуге</a>
+            <a class="btn btn-alt" href="#master" onclick="showBookingBy('master')">Записаться по мастеру</a>
+            <a class="btn btn-alt" href="#date" onclick="showBookingBy('date')">Записаться по дате и времени</a>
+            <form action="booking" method="post">
+                <input type="hidden" id="serviceId"><input type="hidden" id="masterId"><input type="hidden" id="dateId">
+            </form>
+        </section>
+
+        <section class="strip cf" style="color: black;" id="book-table">
+
+        </section>
+
+    </div>
+
+    <footer class="main-footer container cf">
+        <small>© Copyright 2020</small>
+        <!--
+            -->
+        <nav class="nav">
+            <ul>
+                <li>
+                    <a href="#">Новости</a>
+                </li>
+                <li>
+                    <a href="#">Услуги</a>
+                </li>
+                <li>
+                    <a href="#">Мастера</a>
+                </li>
+                <li>
+                    <a href="#">Контакты</a>
+                </li>
+                <li>
+                    <a href="#">О Нас</a>
+                </li>
+                <li>
+                    <a href="#">Войти</a>
+                </li>
+                <li>
+                    <a href="#">Регистрация</a>
+                </li>
+                <li>
+                    <a href="#">Выйти</a>
+                </li>
+            </ul>
+        </nav>
+
+        <script type="text/javascript" src="../script/booking.js"></script>
+    </footer>
+</body>
+
+</html>
+
+
+<!--
+
+<section id="service" class="shelf">
+                    <h3>По услуге</h3>
+                    <aside>
+                        <div class="unit-1of4">ТИП УСЛУГИ</div>
+                        <div class="unit-1of4">УСЛУГА</div>
+                        <div class="unit-1of4"><div class="unit-2of4">ДАТА</div><div class="unit-2of4">ВРЕМЯ</div></div>
+                        <div class="unit-1of4">МАСТЕР</div>
+</aside>
+<aside>
+    <div class="unit-1of4" id="service-category"></div>
+    <div class="unit-1of4" id="service-service"></div>
+    <div class="unit-1of4"><div class="unit-2of4" id="service-date"></div><div class="unit-2of4" id="service-time"></div></div>
+    <div class="unit-1of4" id="service-master"></div>
+</aside>
+</section>
+<section id="master" class="shelf">
+    <h3>По Мастеру</h3>
+    <aside>
+        <div class="unit-1of4">МАСТЕР</div>
+        <div class="unit-1of4">УСЛУГА</div>
+        <div class="unit-1of4"><div class="unit-2of4">ДАТА</div><div class="unit-2of4">ВРЕМЯ</div></div>
+    </aside>
+    <aside>
+        <div class="unit-1of4" id="master-master"></div>
+        <div class="unit-1of4" id="master-service"></div>
+        <div class="unit-1of4"><div class="unit-2of4" id="master-date"></div><div class="unit-2of4" id="master-time"></div></div>
+    </aside>
+</section>
+<section id="date" class="shelf">
+    <h3>По дате и времени</h3>
+    <aside>
+        <div class="unit-1of4"><div class="unit-2of4">ДАТА</div><div class="unit-2of4">ВРЕМЯ</div></div>
+        <div class="unit-1of4">УСЛУГА</div>
+        <div class="unit-1of4">МАСТЕР</div>
+    </aside>
+    <aside>
+        <div class="unit-1of4"><div class="unit-2of4" id="date-date"></div><div class="unit-2of4" id="date-time"></div></div>
+        <div class="unit-1of4" id="date-service"></div>
+        <div class="unit-1of4" id="date-master"></div>
+    </aside>
+</section>
+
+-->

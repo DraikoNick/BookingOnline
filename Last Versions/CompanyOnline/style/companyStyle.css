@@ -1,0 +1,65 @@
+/*
+    Company Style
+*/
+
+/* Company font can be added here
+@import url(https://fonts.googleapis.com/css?family=Lobster&subset=cyrillic);
+or like this
+@font-face {
+    font-family: "Lobster";
+    src: local("Lobster"), url("lobster.woff") format("woff");
+}*/
+
+body {
+    color: #888;
+    font: 300 16px/22px "Roboto", "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+h1, h2, h3, h4 {
+    color: #648880;
+}
+
+h1 {
+    font-size: 36px;
+    line-height: 44px;
+}
+
+h2 {
+    font-size: 24px;
+    line-height: 44px;
+}
+
+h3 {
+    font-size: 21px;
+}
+
+h4 {
+    font-size: 18px;
+}
+
+h5 {
+    color: #a9b2b9;
+    font-size: 14px;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+strong {
+    font-weight: 400;
+}
+
+cite, em {
+    font-style: italic;
+}
+
+a:hover {
+    color: #a9b2b9;
+}
+
+a {
+    color: #648880;
+}
+
+.logo {
+    
+}

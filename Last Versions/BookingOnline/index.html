@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Booking Online</title>
+    <link rel="stylesheet" href="./style/reset.css" />
+    <link rel="stylesheet" href="./style/main.css" />
+</head>
+
+<body onload="showSection('welcome')">
+    <header class="container clearfix">
+        <nav>
+            <a onclick="showSection('welcome')" class="btn navBtn logo">SacuraCo</a>
+            <a onclick="showSection('welcome')" href="#services" class="btn navBtn">Services</a>
+            <a onclick="showSection('welcome')" href="#staff" class="btn navBtn">Staff</a>
+            <a onclick="showSection('contacts')" class="btn navBtn">Contacts</a>
+            <a onclick="showSection('about')" class="btn navBtn">About Us</a>
+            <a onclick="showSection('login')" class="btn navBtn" id="btnNavLogIn">Log In</a>
+            <a onclick="showSection('regin')" class="btn navBtn" id="btnNavRegIn">Register</a>
+            <a onclick="showSection('user')" class="btn navBtn" id="btnNavUser">Guest</a>
+            <a onclick="showSection('logout')" class="btn navBtn" id="btnNavLogOut">Log Out</a>
+        </nav>
+    </header>
+
+    <section id="welcome" class="container">
+        <section class="container">
+            <h1>Welcome to Sacura saloon</h1>
+        </section>
+        <h3>Our beauty saloon can help you look great</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+            magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+            commodo consequat. Duis aute irure
+            dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
+            occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        //some pics here, maybe carousele
+        <section id="services">
+            <h5>Services</h5>
+            <h3>The best experience you ever have had is here</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+                ex ea commodo consequat. Duis aute
+                irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur
+                sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+            
+            
+        </section>
+        <section id="staff" class="grid">
+            <h5>Staff</h5>
+            <h3>We are the best</h3>
+            <article class="grid">
+                <div class="col-1of3"><p>PHOTO HERE</p></div><!--
+             --><div class="col-1of3">
+                    <h2>Tatyana Imekova</h2>
+                    <p>she is a boss here</p>
+                </div>
+            </article>
+            <article class="grid">
+                <div class="col-1of3"><p>PHOTO HERE</p></div><!--
+             --><div class="col-1of3">
+                    <h2>Tatyana Imekova</h2>
+                    <p>she is a boss here</p>
+                </div>
+            </article>
+        </section>
+    </section>
+    <section id="about" class="container">
+        <h3>We do our work</h3>
+        <p>Our employees have big experience in all of this services.</p>
+        //table with services here
+    </section>
+    <section id="contacts" class="container">
+        <h3>Find us here</h3>
+        <p>some address id city</p>
+    </section>
+    <section id="login" class="container">
+        <form name="loginForm" action="login" method="post" onsubmit="return false" autocomplete="off">
+            <p class="error" id="loginError"></p>
+            <p>Phone number or Email</p> <input type="text" name="login">
+            <p>Password</p> <input type="password" name="password">
+            <p><input type="submit" value="Log In" onclick="return doLogIn()" class="btn"></p>
+        </form>
+    </section>
+    <section id="regin" class="container">
+        <form name="reginForm" action="regin" method="post" onsubmit="return false" autocomplete="off">
+            <p class="error" id="reginError">Fields marked with * are required</p>
+            <p>Name*</p> <input type="text" name="name" onchange="checkInputByRegexp('name', this.value)">
+            <p>Surname</p> <input type="text" name="surname" onchange="checkInputByRegexp('surname', this.value)">
+            <p>Phone number*</p> <input type="text" name="phone" onchange="checkInputByRegexp('phone', this.value)">
+            <p>Email</p> <input type="text" name="email" onchange="checkInputByRegexp('email', this.value)">
+            <p>Password*</p> <input type="password" name="password"
+                onchange="checkInputByRegexp('password', this.value)">
+            <p>Re-type Password*</p><input type="password" name="password2"
+                onchange="checkInputByRegexp('password2', this.value)">
+            <p><input type="submit" class="btn" value="Register" onclick="return doRegIn()"></p>
+        </form>
+    </section>
+
+    <footer class="primary-footer container clearfix">
+        <small>&copy; Styles Conference</small>
+        <a href="mailto:imekov.nikita@gmail.com">For questions and suggestions email us</a>
+        <script type="text/javascript" src="./script/main.js"></script>
+    </footer>
+</body>
+
+</html>
+
+</html>

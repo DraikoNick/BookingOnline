@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8">
+    <title>Company Name</title>
+    <link rel="stylesheet" href="../style/reset.css" />
+    <link rel="stylesheet" href="../style/clearFix.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,300,100&subset=cyrillic,latin">
+    <link rel="stylesheet" href="../style/main.css" />
+</head>
+
+<body onload="initPage()">
+    <header class="container cf">
+        <h1 class="logo"><a href="../index.html">Service<br>Reservation</a></h1>
+        <h3 class="contacts">
+            <div class="contact"><img src="../images/operatorsLogo/a1.png" alt="A1 operator"> +375
+                <strong>(29) 3985488</strong></div>
+            <div class="contact"><img src="../images/operatorsLogo/life.png" alt="Life:) operator"> +375
+                <strong>(25) 5019578</strong></div>
+            <div class="contact"><img src="../images/operatorsLogo/mts.png" alt="MTS operator"> +375
+                <strong>(33) 1234567</strong></div>
+            <div class="contact">Наш адрес: <strong>ул. Рогачевская, д. 2г, г. Гомель</strong></div>
+        </h3>
+    </header>
+    <header class="strip-menu cf">
+        <div class="shelf">
+            <nav class="nav main-nav">
+                <ul>
+                    <li>
+                        <a href="../index.html">На главную</a>
+                    </li>
+                    <li>
+                        <a href="../index.html#news">Новости</a>
+                    </li>
+                    <li>
+                        <a href="../index.html#services">Услуги</a>
+                    </li>
+                    <li>
+                        <a href="../index.html#masters">Мастера</a>
+                    </li>
+                    <li>
+                        <a href="../index.html#contacts">Контакты</a>
+                    </li>
+                    <li class="guestBtn">
+                        <a href="../index.html#login">Войти</a>
+                    </li>
+                    <li class="guestBtn">
+                        <a href="../index.html#regin">Регистрация</a>
+                    </li>
+                    <li class="userBtn">
+                        <a href=".././logout">Выйти</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div id="booking">
+        <section class="booking container">
+            <h2>Резервирование времени</h2>
+            <p id="info">Обращаем внимание, что если Вы опаздываете на 15 минут - бронь отменяется.</p>
+            <a class="btn btn-alt" onclick="initBooking('services', 0)">Записаться по услуге</a>
+            <a class="btn btn-alt" onclick="initBooking('masters', 0)">Записаться по мастеру</a>
+            <a class="btn btn-alt" onclick="initBooking('orders', 0)">Записаться по дате и времени</a>
+        </section>
+
+        <section class="strip cf" style="color: black;">
+            <div class="shelf">
+                <aside class="unit-full" id="chooser"></aside>
+                <aside id="register">
+                    <section class="unit-2of3">
+                        <h2>Подтвердите запись</h2>
+                        <br>
+                        <ul>
+                            <li><h3 id="commitService"></h3></li>
+                            <li><h3 id="commitDate"></h3></li>
+                            <li><h3 id="commitTime"></h3></li>
+                            <li><h3 id="commitMaster"></h3></li>
+                        </ul>
+
+                        <p>Осталось только указать Ваши контактные данные</p>
+                        <h3>Зачем Вам мой номер телефона, имя?</h3>
+                        <ul>
+                            <li>Так мы можем связаться с Вами</li>
+                            <li>Вы получите доступ в личный кабинет</li>
+                            <li>В дальнейшем получите приоритет в обслуживании</li>
+                            <li>Так же Вы можете через личный кабинет изменить дату, время</li>
+                        </ul>
+                    </section><!--
+                 --><form class="unit-1of3" name="commitForm" action="" method="post" onsubmit="return false">
+                    <fieldset class="form-group" id="newUserForm">
+                        <h5>Поля отмеченные * -<br>обязательны для заполнения</h5>
+                        <label>
+                            Имя *
+                            <input type="text" name="name" placeholder="Введите имя" autocomplete="on" pattern="^[a-zA-Zа-яА-Я ,.\'-]+$" required>
+                        </label>
+                        <label>
+                            Номер телефона *
+                            <input type="tel" name="phone" placeholder="+375 (29) 1234567" autocomplete="on" pattern="^[+]*[(]{0,1}[0-9]{1,4}[)]{0,1}[-\s\./0-9]*$" required>
+                        </label>
+                        <label>
+                            Пароль *
+                            <input type="password" name="password" placeholder="Пароль" pattern="^(?=.*[A-Za-z])(?=.*\\d)[A-Za-z\\d]{8,}$" required>
+                        </label>
+                        <label>
+                            Повторите пароль *
+                            <input type="password" name="password" placeholder="Повторите пароль" required>
+                        </label>
+                    </fieldset>
+                    <input type="hidden" name="masterId" value="">
+                    <input type="hidden" name="serviceId" value="">
+                    <input type="hidden" name="date" value="">
+                    <input type="hidden" name="time" value="">
+                    <input class="btn btn-default" type="submit" value="Записаться" onclick="doCommit()">
+                </form>
+                </aside>
+            </div>
+        </section>
+
+    </div>
+
+    <footer class="main-footer container cf">
+        <small>© Copyright 2020</small>
+        <!--
+            -->
+        <nav class="nav">
+            <ul>
+                <li>
+                    <a href="#">Новости</a>
+                </li>
+                <li>
+                    <a href="#">Услуги</a>
+                </li>
+                <li>
+                    <a href="#">Мастера</a>
+                </li>
+                <li>
+                    <a href="#">Контакты</a>
+                </li>
+                <li>
+                    <a href="#">О Нас</a>
+                </li>
+                <li>
+                    <a href="#">Войти</a>
+                </li>
+                <li>
+                    <a href="#">Регистрация</a>
+                </li>
+                <li>
+                    <a href="#">Выйти</a>
+                </li>
+            </ul>
+        </nav>
+
+        <script type="text/javascript" src="../script/booking.js"></script>
+    </footer>
+</body>
+
+</html>

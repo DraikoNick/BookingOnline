@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf8">
+    <title>Company Name</title>
+    <link rel="stylesheet" href="./style/reset.css" />
+    <link rel="stylesheet" href="./style/clearFix.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,300,100&subset=cyrillic,latin">
+    <link rel="stylesheet" href="./style/main.css" />
+</head>
+
+<body onload="initPage()">
+    <header class="container cf">
+        <h1 class="logo"><a href="index.html">Service<br>Reservation</a></h1>
+        <h3 class="contacts">
+            <div class="contact"><img src="./images/operatorsLogo/a1.png" alt="A1 operator"> +375
+                <strong>(29) 3985488</strong></div>
+            <div class="contact"><img src="./images/operatorsLogo/life.png" alt="Life:) operator"> +375
+                <strong>(25) 5019578</strong></div>
+            <div class="contact"><img src="./images/operatorsLogo/mts.png" alt="MTS operator"> +375
+                <strong>(33) 1234567</strong></div>
+            <div class="contact">Наш адрес: <strong>ул. Рогачевская, д. 2г, г. Гомель</strong></div>
+        </h3>
+    </header>
+    <header class="strip-menu cf">
+        <div class="shelf">
+            <nav class="nav main-nav">
+                <ul>
+                    <li>
+                        <a href="./view/booking.html">Записаться</a>
+                    </li><li>
+                        <a onclick="initNews()" href="#news">Новости</a>
+                    </li><li>
+                        <a onclick="initServices()" href="#services">Услуги</a>
+                    </li><li>
+                        <a onclick="showSection('masters')" href="#masters">Мастера</a>
+                    </li><li>
+                        <a onclick="showSection('contacts')" href="#contacts">Контакты</a>
+                    </li><li class="guestBtn">
+                        <a onclick="showSection('login')" href="#login">Войти</a>
+                    </li><li class="guestBtn">
+                        <a onclick="showSection('regin')" href="#regin">Регистрация</a>
+                    </li><li class="userBtn">
+                        <a href="./logout">Выйти</a>
+                    </li><li class="userBtn">
+                        <a href="#" id="userName"></a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div id="index">
+        <section class="welcome container">
+            <h2>Мы предоставим Вам лучший сервис<br>и лучшее качество</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            <a class="btn btn-alt" href="./view/booking.html">Записаться OnLine</a>
+        </section>
+        <section class="strip">
+            <div class="shelf">
+                <article class="teaser unit-1of3">
+                    <h5>Новости</h5>
+                    <a onclick="initNews()">
+                        <img src="./images/news/news.jpg" alt="news">
+                        <h3>Новости, Акции и Наши работы</h3>
+                    </a>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+                        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+                        commodo consequat.</p>
+                </article><!--
+            --><article class="teaser unit-1of3">
+                    <h5>Услуги</h5>
+                    <a onclick="initServices()">
+                        <img src="./images/news/news2.jpg" alt="services">
+                        <h3>Список Наших услуг</h3>
+                    </a>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+                        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+                        commodo consequat.</p>
+                </article><!--
+            --><article class="teaser unit-1of3">
+                    <h5>Мастера</h5>
+                    <a onclick="showSection('masters')">
+                        <img src="./images/masters/master.jpg" alt="master">
+                        <h3>Профессионалы своего Дела</h3>
+                    </a>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+                        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+                        commodo consequat.</p>
+                </article>
+            </div>
+        </section>
+    </div>
+
+    <div id="masters">
+        <section class="lead container">
+            <h2>Мастера</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                incididunt ut labore et dolore magna aliqua.</p>
+        </section>
+        <section class="strip-alt">
+            <div class="shelf">
+                <article class="presenter">
+                    <div class="unit-2of3">
+                        <h2>Никита Имеков</h2>
+                        <h5>Стремится поменять работу</h5>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                            incididunt ut labore et dolore magna aliqua.</p>
+                        <h5>О мастере</h5>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                            incididunt ut labore et dolore magna aliqua.</p>
+                    </div><!--
+                --><aside class="unit-1of3">
+                        <div class="presenter-info">
+                            <img src="./images/masters/master.jpg">
+                            <ul>
+                                <li><a href="#">Записаться к мастеру</a></li>
+                                <li><a href="#">Новости о мастере</a></li>
+                            </ul>
+                        </div>
+                    </aside>
+                </article>
+                <article class="presenter">
+                    <div class="unit-2of3">
+                        <h2>Татьяна Имекова</h2>
+                        <h5>Стремится поменять работу тоже</h5>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                            incididunt ut labore et dolore magna aliqua.</p>
+                        <h5>О мастере</h5>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                            incididunt ut labore et dolore magna aliqua.</p>
+                    </div><!--
+                --><aside class="unit-1of3">
+                        <div class="presenter-info">
+                            <img src="./images/masters/master.jpg">
+                            <ul>
+                                <li><a href="#">Записаться к мастеру</a></li>
+                                <li><a href="#">Новости о мастере</a></li>
+                            </ul>
+                        </div>
+                    </aside>
+                </article>
+            </div>
+        </section>
+    </div>
+
+    <div id="contacts">
+        <section class="lead container">
+            <h2>Контакты</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                incididunt ut labore et dolore magna aliqua.</p>
+        </section>
+        <section class="strip-alt">
+            <div class="shelf">
+                <article class="presenter">
+                    <div class="unit-1of3">
+                        <h2>Наш адресс</h2>
+                        <p>246003, ул. Рогачевская, д. 2г<br>г.Гомель, Республика Беларусь</p>
+                    </div><!--
+                --><iframe class="unit-2of3 map"
+                        src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d1719.9132748498378!2d31.00296956145946!3d52.437033011195645!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sru!2sby!4v1589602849618!5m2!1sru!2sby"></iframe>
+                </article>
+                <article class="presenter">
+                    <div class="unit-1of3">
+                        <h2>Режим работы</h2>
+                        <p>10:00 - 20:00</p>
+                    </div><!--
+                --><img class="unit-2of3 map" src="./images/masters/company.jpg" alt="Our Company">
+                </article>
+                <article class="presenter">
+                    <div class="unit-1of3">
+                        <h2>Реквизиты</h2>
+                        <p>УНП 123456789</p>
+                    </div><!--
+                --><iframe class="unit-2of3" src=""></iframe>
+                </article>
+            </div>
+        </section>
+    </div>
+
+    <div id="services">
+        <section class="lead container">
+            <h2>Сервисы</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                incididunt ut labore et dolore magna aliqua.</p>
+        </section>
+        <section class="strip-alt">
+            <div class="shelf">
+                <div class="shelf-header">
+                    <h2 class="unit-2of4">Услуга</h2><h2 class="unit-1of4">Время</h2><h2 class="unit-1of4">Стоимость</h2>
+                </div>
+                <div id="serviceTable"></div>
+            </div>
+        </section>
+    </div>
+
+    <div id="news">
+        <section class="lead container">
+            <h2>Новости</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                incididunt ut labore et dolore magna aliqua.</p>
+        </section>
+        <section class="strip-alt">
+            <div class="shelf">
+                <article class="presenter">
+                    <aside class="unit-1of3">
+                        <div class="presenter-info">
+                            <img src="./images/masters/master.jpg">
+                            <h5>Дата публикации: 09 мая 2020</h5>
+                        </div>
+                    </aside><!--
+                --><div class="unit-2of3">
+                        <h2>Мы запускаем Акцию</h2>
+                        <h5>акция с 1 по 9 мая 2020</h5>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                            incididunt ut labore et dolore magna aliqua.</p>
+                    </div>
+                </article>
+                <article class="presenter">
+                    <aside class="unit-1of3">
+                        <div class="presenter-info">
+                            <img src="./images/masters/master.jpg">
+                            <h5>Дата публикации: 09 мая 2020</h5>
+                        </div>
+                    </aside><!--
+                --><div class="unit-2of3">
+                        <h2>Мы запускаем Акцию</h2>
+                        <h5>акция с 1 по 9 мая 2020</h5>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                            incididunt ut labore et dolore magna aliqua.</p>
+                    </div>
+                </article>
+            </div>
+        </section>
+    </div>
+
+    <div id="login">
+        <section class="strip-alt">
+            <div class="shelf">
+                <section class="unit-2of3">
+                    <h2>Вход в систему</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                            incididunt ut labore et dolore magna aliqua.</p>
+                </section><!--
+            --><form class="unit-1of3" name="loginForm" action="login" method="post" onsubmit="return false">
+                    <fieldset class="form-group">
+                        <p class="error" id="loginError"></p>
+                        <label>
+                            Номер телефона или адрес электронной почты
+                            <input type="tel" name="login" placeholder="+375 (29) 1234567" autocomplete="on" required pattern="^[+]*[(]{0,1}[0-9]{1,4}[)]{0,1}[-\s\./0-9]*$">
+                        </label>
+                        <label>
+                            Пароль
+                            <input type="password" name="password" placeholder="Пароль" autocomplete="on" required pattern="^(?=.*[A-Za-z])(?=.*\\d)[A-Za-z\\d]{8,}$">
+                        </label>
+                    </fieldset>
+                    <input class="btn btn-default" type="submit" value="Войти" onclick="doLogin()">
+                </form>
+            </div>
+        </section>
+    </div>
+
+    <div id="regin">
+        <section class="strip-alt">
+            <div class="shelf">
+                <section class="unit-2of3">
+                    <h2>Зарегестрируйся сейчас</h2>
+                    <p>Регистрируясь в системе - Вы сможете получать выгодные предложения, уведомления и новости</p>
+                    <h3>Зачем регистрироваться?</h3>
+                    <ul>
+                        <li>Возможность получать скидки</li>
+                        <li>Уведомления о акциях</li>
+                        <li>Приоритет в обслуживании</li>
+                        <li>Просто стать частью Нашей семьи</li>
+                    </ul>
+                </section><!--
+            --><form class="unit-1of3" name="reginForm" action="" method="post" onsubmit="return false">
+                    <fieldset class="form-group">
+                        <h5>Поля отмеченные * -<br>обязательны для заполнения</h5>
+                        <p class="error" id="reginError"></p>
+                        <label>
+                            Имя *
+                            <input type="text" name="name" placeholder="Введите имя" autocomplete="on" pattern="^[a-zA-Zа-яА-Я ,.\'-]+$" required>
+                        </label>
+                        <label>
+                            Фамилия
+                            <input type="text" name="surname" placeholder="Введите фамилию" autocomplete="on" pattern="^[a-zA-Zа-яА-Я ,.\'-]+$" >
+                        </label>
+                        <label>
+                            Дата Рождения
+                            <input type="date" name="birthday" placeholder="День Рождения" autocomplete="on"  min="1900-01-01" max="2020-12-31">
+                        </label>
+                        <label>
+                            Номер телефона *
+                            <input type="tel" name="phone" placeholder="+375 (29) 1234567" autocomplete="on" pattern="^[+]*[(]{0,1}[0-9]{1,4}[)]{0,1}[-\s\./0-9]*$" required>
+                        </label>
+                        <label>
+                            Адрес электронной почты
+                            <input type="email" name="email" placeholder="name@domen.com" autocomplete="on" pattern="[a-z0-9!#$%&\'*+/=?^_`{|}~-]+(?:\\.[a-z0-9!#$%&\'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?">
+                        </label>
+                        <label>
+                            Пароль *
+                            <input type="password" name="password" placeholder="Пароль" pattern="^(?=.*[A-Za-z])(?=.*\\d)[A-Za-z\\d]{8,}$" required>
+                        </label>
+                        <label>
+                            Повторите пароль *
+                            <input type="password" name="password" placeholder="Повторите пароль" required>
+                        </label>
+                    </fieldset>
+                    <input class="btn btn-default" type="submit" value="Зарегистрироваться" onclick="doRegin()">
+                </form>
+            </div>
+        </section>
+    </div>
+
+    <footer class="main-footer container cf">
+        <small>© Copyright 2020</small>
+        <!--
+            -->
+        <nav class="nav">
+            <ul>
+                <li>
+                    <a href="./view/booking.html">Записаться</a>
+                </li><li>
+                    <a onclick="initNews()" href="#news">Новости</a>
+                </li><li>
+                    <a onclick="initServices()" href="#services">Услуги</a>
+                </li><li>
+                    <a onclick="showSection('masters')" href="#masters">Мастера</a>
+                </li><li>
+                    <a onclick="showSection('contacts')" href="#contacts">Контакты</a>
+                </li>
+            </ul>
+        </nav>
+
+        <script type="text/javascript" src="./script/index.js"></script>
+    </footer>
+</body>
+
+</html>
